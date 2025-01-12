@@ -6,6 +6,6 @@ public class CapsuleScaling : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale += Vector3.one * _scalingSpeed * Time.deltaTime;
+        transform.localScale += Vector3.one * (_scalingSpeed * Time.deltaTime);
     }
 }

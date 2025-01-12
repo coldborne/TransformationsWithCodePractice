@@ -6,7 +6,7 @@ public class SphereMovement : MonoBehaviour
     
     private void Update()
     {
-        Vector3 shift = Vector3.forward * _movementSpeed * Time.deltaTime;
+        Vector3 shift = Vector3.forward * (_movementSpeed * Time.deltaTime);
         transform.Translate(shift);
     }
 }

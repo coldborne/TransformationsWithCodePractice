@@ -3,9 +3,11 @@ using UnityEngine;
 public class CubeRotation : MonoBehaviour
 {
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _yRotationAngle;
 
     private void Update()
     {
-        transform.Rotate(Quaternion.Euler(0, 90f, 0) * Vector3.up * _rotationSpeed * Time.deltaTime);
+        Vector3 rotation = Quaternion.Euler(0, _yRotationAngle, 0) * Vector3.up * (_rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotation, Space.Self);
     }
 }
