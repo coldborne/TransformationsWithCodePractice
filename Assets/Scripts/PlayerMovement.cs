@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _scalingSpeed;
     [SerializeField] private float _movementSpeed;
 
-    void Update()
+    private void Update()
     {
         transform.Translate(Vector3.forward * _movementSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime);
